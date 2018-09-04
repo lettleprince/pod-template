@@ -198,13 +198,11 @@ module Pod
     end
 
     def github_user_name
-      github_user_name = `security find-internet-password -s github.com | grep acct | sed 's/"acct"<blob>="//g' | sed 's/"//g'`.strip
-      is_valid = github_user_name.empty? or github_user_name.include? '@'
-      return is_valid ? nil : github_user_name
+      return 'TonyHan'
     end
 
     def user_email
-      (ENV['GIT_COMMITTER_EMAIL'] || `git config user.email`).strip
+      'tong.decula@gmail.com'
     end
 
     def year
